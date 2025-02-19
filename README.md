@@ -52,7 +52,6 @@ This repository contains a collection of small demo tools and examples designed 
 - [Errors As/Is](cmd/intermediate-errors_as_is)
 - [Files I/O](cmd/intermediate-files_io)
 - [Generics](cmd/intermediate-generics)
-- [HTTP Tracing](cmd/intermediate-http_tracing)
 - [Interface Composition](cmd/intermediate-interface_composition)
 - [JSON Struct Tags](cmd/intermediate-json_struct_tags)
 - [Method Sets](cmd/intermediate-method_sets)
@@ -108,6 +107,7 @@ This repository contains a collection of small demo tools and examples designed 
 
 ### Profiling
 - [Benchmarking](cmd/profiling-benchmarking)
+- [HTTP Tracing](cmd/profiling-http_tracing)
 - [pprof Dump](cmd/profiling-pprof_dump)
 - [pprof Server](cmd/profiling-pprof_server)
 - [Runtime Trace](cmd/profiling-runtime_trace)
