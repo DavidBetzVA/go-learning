@@ -1,3 +1,7 @@
+// This example demonstrates the use of panic and recover in Go.
+// Panic should be used sparingly, typically for unrecoverable errors.
+// Recover can be used to regain control of a panicking goroutine, but it should not be used to ignore errors.
+
 package main
 
 import "fmt"
