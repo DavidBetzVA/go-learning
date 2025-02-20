@@ -1,4 +1,4 @@
-# Go Learning Repository
+# Go Learning and Guidelines
 
 This repository contains a collection of small demo tools and examples designed to help developers learn and improve their Go development skills. These examples cover various aspects of Go, including concurrency, memory management, profiling, and more.
 
