@@ -6,7 +6,43 @@ This repository contains a collection of small demo tools and examples designed 
 
     go run ./cmd/NAME
 
-## Table of Contents
+# Reviews
+
+Before pushing your Go code, please ensure that you run the following commands locally without error. These checks are also run by GitHub Actions, so running them locally first will help you catch issues early.
+
+1. **Build the project:**
+    ```sh
+    go build ./...
+    ```
+
+2. **Run tests:**
+    ```sh
+    go test ./...
+    ```
+
+3. **Check for unchecked errors:**
+    ```sh
+    errcheck ./...
+    ```
+
+4. **Run static analysis:**
+    ```sh
+    staticcheck ./...
+    ```
+
+5. **Run security checks:**
+    ```sh
+    gosec ./...
+    ```
+
+6. **Check for known vulnerabilities:**
+    ```sh
+    govulncheck ./...
+    ```
+
+By following these steps, you can ensure that your code meets the required standards and is free of common issues.
+
+## Demo Table of Contents
 
 - [Categories](#categories)
   - [Fundamentals](#fundamentals)
