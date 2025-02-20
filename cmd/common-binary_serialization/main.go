@@ -28,13 +28,13 @@ func main() {
 	original := Data{Name: "Example", Value: 42}
 
 	// Encode the original data structure into the buffer.
-	enc.Encode(original)
+	_ = enc.Encode(original)
 
 	// Create a variable to hold the decoded data.
 	var decoded Data
 
 	// Decode the data from the buffer into the decoded variable.
-	dec.Decode(&decoded)
+	_ = dec.Decode(&decoded)
 
 	// Print the decoded data to verify it matches the original.
 	fmt.Println("Decoded:", decoded)

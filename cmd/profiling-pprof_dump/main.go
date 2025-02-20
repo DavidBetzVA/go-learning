@@ -27,7 +27,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not create CPU profile: %v", err)
 	}
-	defer cpuFile.Close()
+	defer func() {
+		_ = cpuFile.Close()
+	}()
 
 	// Start CPU profiling
 	if err := pprof.StartCPUProfile(cpuFile); err != nil {
@@ -45,7 +47,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not create memory profile: %v", err)
 	}
-	defer memFile.Close()
+	defer func() {
+		_ = memFile.Close()
+	}()
 
 	// Write memory profile
 	runtime.GC() // get up-to-date statistics

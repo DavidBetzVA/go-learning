@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	os.Setenv("APP_MODE", "development")
+	_ = os.Setenv("APP_MODE", "development")
 	mode := os.Getenv("APP_MODE")
 
 	fmt.Println("Application Mode:", mode)

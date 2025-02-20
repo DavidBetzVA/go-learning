@@ -15,5 +15,5 @@ type Person struct {
 func main() {
 	p := Person{Name: "Alice", Age: 25}
 	t, _ := template.New("greeting").Parse(tmpl)
-	t.Execute(os.Stdout, p)
+	_ = t.Execute(os.Stdout, p)
 }

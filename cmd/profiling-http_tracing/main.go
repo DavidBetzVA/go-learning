@@ -30,14 +30,26 @@ func main() {
 
 	// Start a separate goroutine to run the pprof server for profiling
 	go func() {
-		// Log that the pprof server is starting
-		log.Println("Starting pprof server on :6060")
 		// Start the pprof server on port 6060 and log any errors
-		log.Println(http.ListenAndServe("localhost:6060", nil))
+		server := &http.Server{
+			Addr:         "localhost:6060",
+			Handler:      nil,
+			ReadTimeout:  5 * time.Second,
+			WriteTimeout: 10 * time.Second,
+			IdleTimeout:  15 * time.Second,
+		}
+		log.Println(server.ListenAndServe())
 	}()
 
 	// Log that the main HTTP server is starting
 	log.Println("Starting HTTP server on :8080")
-	// Start the main HTTP server on port 8080 and log any fatal errors
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	// Start the main HTTP server on port 8080 with timeouts and log any fatal errors
+	server := &http.Server{
+		Addr:         ":8080",
+		Handler:      nil,
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 10 * time.Second,
+		IdleTimeout:  15 * time.Second,
+	}
+	log.Fatal(server.ListenAndServe())
 }

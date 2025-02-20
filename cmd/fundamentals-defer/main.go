@@ -15,7 +15,9 @@ func exampleCloseFile() {
 		return
 	}
 	// Ensure the file is closed when the function exits
-	defer file.Close()
+	defer func() {
+		_ = file.Close()
+	}()
 
 	// ...existing code to work with the file...
 	fmt.Println("File opened successfully")

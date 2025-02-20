@@ -10,7 +10,7 @@ type Person struct {
 func main() {
 	// Method 1: Direct struct initialization
 	a := Person{Name: "Alice", Age: 30}
-	
+
 	// Method 2: Using new (returns a pointer)
 	b := new(Person)
 	b.Name = "Bob"

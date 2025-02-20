@@ -12,7 +12,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer watcher.Close()
+	defer func() {
+		_ = watcher.Close()
+	}()
 
 	done := make(chan bool)
 	go func() {

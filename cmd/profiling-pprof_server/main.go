@@ -33,7 +33,7 @@ func main() {
 	// Define a simple handler
 	r.HandleFunc("/work", func(w http.ResponseWriter, r *http.Request) {
 		go doWork()
-		w.Write([]byte("Work started"))
+		_, _ = w.Write([]byte("Work started"))
 	}).Methods("GET")
 
 	// Start the HTTP server

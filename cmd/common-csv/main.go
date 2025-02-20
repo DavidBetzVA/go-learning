@@ -11,7 +11,9 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	defer file.Close()
+	defer func() {
+		_ = file.Close()
+	}()
 
 	writer := csv.NewWriter(file)
 	defer writer.Flush()

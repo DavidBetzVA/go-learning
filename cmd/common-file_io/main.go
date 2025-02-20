@@ -11,7 +11,7 @@ func main() {
 
 	// Write to a file
 	content := []byte("Hello, Go developers!")
-	err := os.WriteFile(fileName, content, 0644)
+	err := os.WriteFile(fileName, content, 0600)
 	if err != nil {
 		fmt.Println("Error writing to file:", err)
 		return
