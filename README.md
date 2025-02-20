@@ -16,6 +16,7 @@ This repository contains a collection of small demo tools and examples designed 
   - [Common Utilities](#common-utilities)
   - [Profiling](#profiling)
   - [Web](#web)
+  - [GoF (Gang of Four) Design Patterns](#gof-gang-of-four-design-patterns)
 
 ## Categories
 
@@ -115,4 +116,35 @@ This repository contains a collection of small demo tools and examples designed 
 ### Web
 - [HTTP Middlewares](cmd/web-http_middlewares)
 - [Mux](cmd/web-mux)
+
+### GoF (Gang of Four) Design Patterns
+
+#### Behavioral
+- [Chain of Responsibility](cmd/gof-behavioral-chain_of_responsibility)
+- [Command](cmd/gof-behavioral-command)
+- [Interpreter](cmd/gof-behavioral-interpreter)
+- [Iterator](cmd/gof-behavioral-iterator)
+- [Mediator](cmd/gof-behavioral-mediator)
+- [Memento](cmd/gof-behavioral-memento)
+- [Observer](cmd/gof-behavioral-observer)
+- [State](cmd/gof-behavioral-state)
+- [Strategy](cmd/gof-behavioral-strategy)
+- [Template Method](cmd/gof-behavioral-template_method)
+- [Visitor](cmd/gof-behavioral-visitor)
+
+#### Creational
+- [Abstract Factory](cmd/gof-creational-abstract_factory)
+- [Builder](cmd/gof-creational-builder)
+- [Factory](cmd/gof-creational-factory)
+- [Prototype](cmd/gof-creational-prototype)
+- [Singleton](cmd/gof-creational-singleton)
+
+#### Structural
+- [Adapter](cmd/gof-structural-adapter)
+- [Bridge](cmd/gof-structural-bridge)
+- [Composite](cmd/gof-structural-composite)
+- [Decorator](cmd/gof-structural-decorator)
+- [Facade](cmd/gof-structural-facade)
+- [Flyweight](cmd/gof-structural-flyweight)
+- [Proxy](cmd/gof-structural-proxy)
 
